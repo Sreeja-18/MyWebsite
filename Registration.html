@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>
+            Registration page
+        </title>
+    </head>
+    <script>
+        function myFunction(){
+            var Name=document.myform.NAME.value;
+            var username=document.myform.uname.value;
+            var password=document.myform.pwd.value;
+            var mail=document.myform.email.value;
+            var phone=document.myform.phone.value;
+            var confirm=document.myform.pass.value;
+            if(Name==null || Name==""){
+                alert("Name cannot be blank");
+                return false;
+            }
+            else if(mail==null || mail==""){
+                alert("Please enter valid email");
+                return false;
+            }
+            else if(phone.length<10){
+                alert("Please enter valid mobile number");
+                return false;
+            }
+            else if(username==null || username==""){
+                alert("UserName cannot be blank");
+                return false;
+            }
+            else if(password.length<6){
+                alert("Password should be atleast 6 characters");
+                return false;
+            }
+            else if(confirm=="" || confirm != password){
+                alert("Password does not match");
+                return false;
+            }
+        }
+    </script>
+    <h1>REGISTRATION PAGE</h1>
+    <body>
+        <nav>
+            <a id="Home" href="music.html">Home</a>
+         </nav>
+        </style>
+        <br>
+        <div>
+        REGISTER HERE!
+        <form name="myform" action="login.html" onsubmit="return myFunction()">
+        <br><br>
+        ENTER YOUR NAME :
+        <input type="NAME" name="NAME" placeholder="Name"><br><br>
+        ENTER YOUR GMAIL :
+        <input type="email" placeholder="Gamil" list="email" name="email"><br><br>
+        ENTER YOUR PH NUMBER :
+        <input type="tel" placeholder="PH Number" pattern="[0-9]{10}" name="phone"><br><br>
+        User Name:<br><input type="text" name="uname" placeholder="User Name"><br>
+        Password :<br><input type="password" name="pwd" placeholder="Password"><br>
+        Confirm Password :<input type="text" name="pass" placeholder="Confim Password"><br><br>
+                <button><a href="login.html"><input id="sub" type="SUBMIT"></a></button>
+                </div>
+            </form>
+
+    </body>
+</html>
